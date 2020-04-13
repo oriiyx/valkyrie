@@ -1,0 +1,17 @@
+{
+    "name": "parav/valkyrie",
+    "description": "Website monitoring tool.",
+    "type": "project",
+    "license": "GNU3",
+    "authors": [
+        {
+            "name": "Peter Paravinja",
+            "email": "paravinja92@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "kreait/firebase-php": "4.0",
+        "ext-curl": "*"
+    }
+}
