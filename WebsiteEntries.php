@@ -1,9 +1,8 @@
 <?php
 
-
 namespace WebsiteEntries;
 
-require_once './vendor/autoload.php';
+require_once './autoFileImporter.php';
 
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;

@@ -1,13 +1,15 @@
 <?php
 
-use WebsiteEntries\WebsiteEntries;
+require_once './autoFileImporter.php';
 
-require_once './WebsiteEntries.php';
+if(isset($_POST['website-url'])){
+	$urls = $_POST['website-url'];
+	$names = $_POST['website-name'];
+	$count = count($_POST['website-url']);
+}else{
+	$count = 0;
+}
 
-$urls = $_POST['website-url'];
-$names = $_POST['website-name'];
-
-$count = count($_POST['website-url']);
 for($i=0; $i < $count; $i++){
 	$entry = new WebsiteEntries();
 	$entry->insert([

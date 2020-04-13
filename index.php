@@ -2,10 +2,7 @@
 
 use WebsiteEntries\WebsiteEntries;
 
-require_once './vendor/autoload.php';
-require_once 'head.php';
-require_once 'addingWebsiteEntries.php';
-require_once 'WebsiteEntries.php';
+require_once 'autoFileImporter.php';
 
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
