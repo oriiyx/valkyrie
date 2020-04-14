@@ -49,6 +49,7 @@ jQuery(document).ready(function($) {
             console.log(data);
             $('#submit-website-addition').html('<p>Data inserted successfully</p>');
             $('#submit-website-addition').html('<p>'+data+'</p>');
+            location.reload();
           },
           error:function(xhr,status,error){
             console.log(xhr);

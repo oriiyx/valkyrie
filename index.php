@@ -44,7 +44,6 @@ error_reporting(E_ALL);
             </div>
 
              <div>
-<!--                 <form action="functions/addingWebsiteEntries.php" method="post">-->
                  <form id="submit-website-addition">
                      <div class="form-group" id="form-adding-websites">
                          <div class="col-sm-12">
@@ -66,6 +65,14 @@ error_reporting(E_ALL);
                      <input type="button" name="submit" id="submit" value="Save" class="btn btn-primary mb-2" id="save-data-adding-websites" />
                  </form>
              </div>
+
+
+            <div>
+                <?php
+                    include_once 'displayCurrentEntries.php';
+
+                ?>
+            </div>
         </main>
     </div>
 </div>
