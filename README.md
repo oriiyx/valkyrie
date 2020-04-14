@@ -12,3 +12,5 @@ To use this repo follow these steps:
 1. Download repo
 2. Composer install (you need to have gRPC extension - https://cloud.google.com/php/grpc)
 3. Switch 'projectId' inside Firestore.php with yours.
+
+You can check live demo (currently being developed) at https://paravinja.com/valkyrie/
