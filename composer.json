@@ -11,7 +11,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "kreait/firebase-php": "4.0",
-        "ext-curl": "*"
+        "ext-curl": "*",
+        "ext-grpc": "*",
+        "google/cloud-firestore": "dev-master"
     }
 }

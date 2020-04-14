@@ -73,6 +73,6 @@ error_reporting(E_ALL);
 
 <?php
 
-$test = new WebsiteEntries();
-$all_entries = $test->getAllEntries();
-var_dump($all_entries);
+//$test = new WebsiteEntries();
+//$all_entries = $test->getAllEntries();
+//var_dump($all_entries);

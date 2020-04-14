@@ -30,6 +30,7 @@ require_once getHtmlRootFolder() . 'valkyrie/head.php';
 require_once getHtmlRootFolder() . 'valkyrie/addingWebsiteEntries.php';
 
 // Classes
-include_once getHtmlRootFolder() . 'valkyrie/WebsiteEntries.php';
-include_once getHtmlRootFolder() . 'valkyrie/DisplayWebsiteEnitres.php';
-include_once getHtmlRootFolder() . 'valkyrie/Users.php';
+//include_once getHtmlRootFolder() . 'valkyrie/WebsiteEntries.php';
+//include_once getHtmlRootFolder() . 'valkyrie/DisplayWebsiteEnitres.php';
+//include_once getHtmlRootFolder() . 'valkyrie/Users.php';
+include_once getHtmlRootFolder() . 'valkyrie/Firestore.php';
