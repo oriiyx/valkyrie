@@ -6,4 +6,10 @@
 	<link rel="stylesheet"  href="assets/css/style.css">
 	<script src="assets/js/script.js"></script>
 	<link rel='icon' href='./assets/icons/viking.ico' type='image/x-icon'/ >
+	<title>Valkyrie - Monitoring system</title>
+
+	<!--test dashboard template-->
+	<link rel="stylesheet" href="./assets/css/sb-admin-2.css">
+    <script src="https://kit.fontawesome.com/c4382a6ae8.js" crossorigin="anonymous"></script>
+<!--	<script src="assets/js/sb-admin-2.js"></script>-->
 </head>

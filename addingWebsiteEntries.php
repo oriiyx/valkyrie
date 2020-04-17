@@ -24,10 +24,10 @@ if ( $count != 0 ) {
 for ( $i = 0; $i < $count; $i ++ ) {
 
 	$name_tag = strtolower( str_replace( " ", "-", $names[ $i ] ) );
-	var_dump( $firestoreConnection->newDocument( $name_tag, [
+	$firestoreConnection->newDocument( $name_tag, [
 		'website-name' => $names[ $i ],
 		'website-url'  => $urls[ $i ],
-	] ) );
+	] );
 
 	echo '<br>';
 	echo $names[ $i ] . ' has been added to your watchlist';

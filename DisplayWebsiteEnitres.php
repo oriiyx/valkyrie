@@ -53,11 +53,8 @@ class DisplayWebsiteEnitres {
 		$err      = curl_error( $curl );
 
 		curl_close( $curl );
-		return $info;
-	}
 
-	public function storeInformationInDB() {
-		// TODO - make continual DB syncing for storing of past PING information
+		return $info;
 	}
 
 	/**
@@ -73,26 +70,30 @@ class DisplayWebsiteEnitres {
 		foreach ( $websiteIds as $id ) {
 			$document = $this->firebaseConnection->getDocument( $id );
 			$info[]   = [
-				'ping-info'     =>  $this->getPingInformation( $document['website-url'] ),
-				'website-info'  =>  $document['website-name']
+				'ping-info'    => $this->getPingInformation( $document['website-url'] ),
+				'website-info' => $document['website-name'],
 			];
 		}
+
 		return $info;
 	}
 
-	public function displayInformationFromAllEntries(){
-		$data = $this->getInformationFromAllEntries();
+	public function displayInformationFromAllEntries() {
+		$data         = $this->getInformationFromAllEntries();
 		$return_array = [];
-		foreach ($data as $entry){
-			$name = $entry['website-info'];
-			$ping_code = $entry['ping-info']['http_code'];
-			$url = $entry['ping-info']['url'];
+		foreach ( $data as $entry ) {
+			$name           = $entry['website-info'];
+			$ping_code      = $entry['ping-info']['http_code'];
+			$url            = $entry['ping-info']['url'];
+			$db_entry       = strtolower( str_replace( " ", "-", $entry['website-info'] ) );
 			$return_array[] = [
-				'name'      =>  $name,
-				'ping_code' =>  $ping_code,
-				'url'       =>  $url
+				'name'      => $name,
+				'ping_code' => $ping_code,
+				'url'       => $url,
+				'db-entry'  => $db_entry
 			];
 		}
+
 		return $return_array;
 	}
 
