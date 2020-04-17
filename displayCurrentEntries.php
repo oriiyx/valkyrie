@@ -7,6 +7,8 @@ require_once './autoFileImporter.php';
 $entries = new DisplayWebsiteEnitres();
 $entries = $entries->displayInformationFromAllEntries();
 
+var_dump($entries);
+
 ?>
 
 <div class="row">

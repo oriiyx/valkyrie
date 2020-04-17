@@ -53,7 +53,6 @@ class DisplayWebsiteEnitres {
 		$err      = curl_error( $curl );
 
 		curl_close( $curl );
-
 		return $info;
 	}
 

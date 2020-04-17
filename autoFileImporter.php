@@ -32,3 +32,4 @@ require_once getHtmlRootFolder() . 'valkyrie/addingWebsiteEntries.php';
 // Classes
 include_once getHtmlRootFolder() . 'valkyrie/DisplayWebsiteEnitres.php';
 include_once getHtmlRootFolder() . 'valkyrie/Firestore.php';
+include_once getHtmlRootFolder() . 'valkyrie/SaveData.php';

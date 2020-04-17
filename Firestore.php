@@ -96,7 +96,8 @@ class Firestore {
 	 */
 	public function newDocumentEntry( string $name, array $data = [] ) {
 		try {
-			$this->db->collection( $this->name )->document( $name )->set($data);
+			$this->db->collection( $this->name )->document( $name )->set($data, ['merge' => true]);
+//			$this->db->collection( $this->name )->document( $name )->update($data);
 
 			return true;
 		} catch ( Exception $exception ) {
