@@ -15,9 +15,14 @@ class SaveData extends Firestore {
 			$entry_name = strtolower( str_replace( " ", "-",  $entry['name'] ) );
 			$time = time();
 			$this->newDocumentEntry($entry_name, [
+				'website-name'  =>  $entry['name'],
 				$time  => $entry['ping_code']
 			]);
 		}
+	}
+
+	public function setWebsiteName(){
+
 	}
 }
 

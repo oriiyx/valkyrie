@@ -8,7 +8,7 @@ require_once './autoFileImporter.php';
 
 class DisplayWebsiteEnitres {
 	// Database Connection property
-	protected $firebaseConnection;
+	public $firebaseConnection;
 
 	public function __construct() {
 		$this->firebaseConnection = ( new \Firestore( 'website-entries' ) );
@@ -96,6 +96,34 @@ class DisplayWebsiteEnitres {
 
 		return $return_array;
 	}
+
+
+	/**
+	 * @return array
+	 */
+	public function getInformationFromAllRecords() {
+		$website_entries = $this->firebaseConnection->getCollection( 'data-records' );
+		$websiteIds      = [];
+		$info            = [];
+		foreach ( $website_entries->documents() as $item ) {
+			$websiteIds[] = $item->id();
+		}
+		foreach ( $websiteIds as $id ) {
+			$document = $this->firebaseConnection->getDocument( $id );
+			foreach ( $document as $time => $item ) {
+				$time_and_date = date("Y-m-d h:i:s", $time);
+				if($time_and_date != false){
+					$info[$id][]   = [
+						'time'          =>  $time_and_date,
+						'status'        =>  $item
+					];
+				}
+			}
+		}
+
+		return $info;
+	}
+
 
 }
 

@@ -26,10 +26,8 @@ function getHtmlRootFolder( string $root = '/home/paravinj/' ) {
 
 
 require_once getHtmlRootFolder() . 'valkyrie/vendor/autoload.php';
-require_once getHtmlRootFolder() . 'valkyrie/head.php';
-require_once getHtmlRootFolder() . 'valkyrie/addingWebsiteEntries.php';
 
 // Classes
 include_once getHtmlRootFolder() . 'valkyrie/DisplayWebsiteEnitres.php';
 include_once getHtmlRootFolder() . 'valkyrie/Firestore.php';
-include_once getHtmlRootFolder() . 'valkyrie/SaveData.php';
+//include_once getHtmlRootFolder() . 'valkyrie/SaveData.php';

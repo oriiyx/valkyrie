@@ -11,5 +11,6 @@
 	<!--test dashboard template-->
 	<link rel="stylesheet" href="./assets/css/sb-admin-2.css">
     <script src="https://kit.fontawesome.com/c4382a6ae8.js" crossorigin="anonymous"></script>
-<!--	<script src="assets/js/sb-admin-2.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 </head>

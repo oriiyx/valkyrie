@@ -3,10 +3,7 @@
 use WebsiteEntries\WebsiteEntries;
 
 require_once 'autoFileImporter.php';
-
-ini_set( 'display_errors', '1' );
-ini_set( 'display_startup_errors', '1' );
-error_reporting( E_ALL );
+require_once 'head.php';
 
 
 ?>
@@ -71,13 +68,9 @@ error_reporting( E_ALL );
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright © oriyx 2020</span>
-                    </div>
-                </div>
-            </footer>
+	        <?php
+	        include_once 'footer.php';
+	        ?>
             <!-- End of Footer -->
 
         </div>
